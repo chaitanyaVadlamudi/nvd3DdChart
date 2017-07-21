@@ -1,0 +1,80 @@
+{
+    "clustername": "cluster1",
+    "children": [
+        {
+            "neighborhoodname": "Shaw",
+            "children": [
+                {
+
+                    "totpop2000": "1005",
+                    "children": [
+                        {
+                            "name": "demographic",
+                            "children": [
+                                {
+                                    "name": "Black",
+                                    "size2000": 0.18
+                                },
+                                {
+                                    "name": "White",
+                                    "size2000": 0.6
+                                },
+                                {
+                                    "name": "Hispanic",
+                                    "size2000": 0.40
+                                },
+                                {
+                                    "name": "Asian",
+                                    "size2000": 0.10
+                                }
+        ]
+        },
+                        {
+                            "name": "wellbeing",
+                            "children": [
+                                {
+                                    "name": "Unemployment",
+                                    "size2000": 0.40
+                                },
+                                {
+                                    "name": "Poverty",
+                                    "size2000": 0.1
+                                },
+                                {
+                                    "name": "Without HS Education",
+                                    "size2000": 0.31
+                                }
+        ]
+        },
+                        {
+                            "name": "crime",
+                            "children": [
+                                {
+                                    "name": "Violent Crime",
+                                    "size2000": 0.09
+                                },
+                                {
+                                    "name": "Property Crime",
+                                    "size2000": 0.08
+                                }
+        ]
+        },
+                        {
+                            "name": "housing",
+                            "children": [
+                                {
+                                    "name": "Home Ownership",
+                                    "size2000": 0.34
+                                },
+                                {
+                                    "name": "Houses for Rent",
+                                    "size2000": 0.50
+                                }
+        ]
+    }
+   ]
+   }
+  ]
+  }
+ ]
+}
