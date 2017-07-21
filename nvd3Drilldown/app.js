@@ -1,5 +1,5 @@
 angular.module("d3Demo", ["nvd3"])
-    .controller("drillController", ["$scope", function ($scope) {
+    .controller("drillController", ["$scope", "$rootScope", function ($scope, $rootScope) {
         $scope.caption = "Incidents by Partners";
         $scope.options = {
             chart: {
@@ -37,21 +37,33 @@ angular.module("d3Demo", ["nvd3"])
                 multibar: {
                     dispatch: {
                         elementClick: function (e) {
+                            //                            $scope.count++;
+                            //                            for (i = 0; i < $scope.count; i++) {
                             $scope.data1 = [];
+                            //                            if ($scope.data1.length < $scope.data.length)
                             angular.copy($scope.data, $scope.data1);
+                            //                            $rootScope.$broadcast("drillData", $scope.data1)
+                            //                                console.log("data1" + JSON.stringify($scope.data1))
                             $scope.data = e.data.drillDownData;
                             $scope.$apply();
+                            //                            }                       
                         }
                     }
                 },
             }
         };
+        $scope.count = 0;
         $scope.drill = function (e) {
 
-            if ($scope.data1 == null)
+            if ($scope.data1 == null) {
                 return;
-            else {
+            } else {
+                console.log($scope.data1.length)
                 $scope.data = $scope.data1;
+                //                $scope.$on("drillData", function (events, args) {
+                //                    $scope.data = args;
+                console.log($scope.data);
+                //                })
             }
         }
 
